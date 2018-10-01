@@ -9,14 +9,15 @@ User.destroy_all
 Product.destroy_all
 # Order.destroy_all
 
-30.times do |index|
-  Product.create!(name: Faker::Beer.name,
-    price: Faker::Number.decimal(2, 2))
+20.times do |index|
+  Product.create!(name: "Lute", price: 3000, condition: "excellent", maker: "Hans Frei", model: "Frei Pearl", tuning: "d-minor", finish: "shellac and wax", category: "Lute", sub_category: "Baroque", made_in: "USA", year: 1998, shipping: 75)
 end
 
 User.create!( email: "admin@admin.com", password: "password", superadmin_role: true )
 User.create!( email: "visor@visor.com", password: "password", supervisor_role: true )
 User.create!( email: "test@test.com", password: "password", user_role: true )
+
+User.create!( email: "maker@maker.com", password: "password", supervisor_role: true, joined: '2014', maker: true)
 
 
 # 30.times do |index|
