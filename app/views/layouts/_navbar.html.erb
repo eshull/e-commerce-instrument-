@@ -1,0 +1,35 @@
+<nav class="navbar navbar-dark bg-dark">
+
+  <span class="navbar-text">
+    <h4>Beer-Commerce</h4>
+  </span>
+  <span class="navbar-text">
+    <h4><%= link_to "Home", products_path %></h4>
+  </span>
+  <span class="navbar-text">
+    <h4><%= link_to "Cart", cart_path %> <span id="cart-quantity"><%= cart_qty %> </span></h4>
+  </span>
+  <span class="navbar-text newProduct">
+    <h4><%= link_to "Add New Product", new_product_path %></h4>
+  </span>
+  <span class="navbar-text">
+    <% if can? :manage, User %>
+    <%= link_to rails_admin_path, class: 'login-button' do %><h4>Dashboard</h4><% end %>
+    <% end %>
+  </span>
+  <% if user_signed_in? %>
+  <span class="navbar-text">
+    <h4><%= link_to('Edit registration', edit_user_registration_path) %></h4>
+  </span>
+  <span class="navbar-text">
+    <h4><%= link_to('Logout', destroy_user_session_path, :method => :delete) %></h4>
+  </span>
+  <% else %>
+  <span class="navbar-text">
+    <h4><%= link_to('Register', new_user_registration_path)  %></h4>
+  </span>
+  <span class="navbar-text">
+    <h4><%= link_to('Login', new_user_session_path)  %></h4>
+  </span>
+  <% end %>
+</nav>

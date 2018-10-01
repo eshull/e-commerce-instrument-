@@ -1,0 +1,15 @@
+
+<% if current_order.order_items %>
+  <% current_order.order_items.each do |item| %>
+    <div id="item<%=item.id%>">
+      <p><%= item.product.name %> | <%= link_to "Delete", order_item_path(item), :data => {:confirm => "You sure?", :method => "delete"}, remote: true %></p>
+      <p> Unit Price: <%= number_to_currency item.product.price %> | Quantity: <%= item.quantity %> | Total Price: <%= number_to_currency (item.product.price * item.quantity) %></p>
+      <hr>
+    </div>
+
+  <% end %>
+
+  <div class="price-container"><h3>Your Total: <strong><%= number_to_currency current_order.total_price %></strong></h3></div>
+<% else %>
+  <p>Your shopping cart is empty.</p>
+<% end %>
