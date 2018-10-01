@@ -2,6 +2,34 @@ class Ability
   include CanCan::Ability
 
   def initialize(user)
+
+    user ||= User.new # guest user (not logged in)
+    if user.superadmin_role?
+          can :manage, :all
+          can :access, :rails_admin       # only allow admin users to access Rails Admin
+          can :dashboard                  # allow access to dashboard
+    end
+    if user.supervisor_role?
+          can :manage, User
+    end
+
+  end
+
+    # Usage in views:
+    # current_user.superadmin_role?
+    # current_user.supervisor_role?
+    # current_user.user_role?
+
+    # also:
+    # <% if current_user.superadmin_role? || current_user.supervisor_role? %>
+    # 	<p>Visible only for superadmins and supervisors! </p>
+    # <% end %>
+    #
+    # or:
+    # <% if can? :manage, User %>
+  	# <p>Visible only for superadmins and supervisors! </p>
+    # <% end %>
+
     # Define abilities for the passed in user here. For example:
     #
     #   user ||= User.new # guest user (not logged in)
@@ -28,5 +56,5 @@ class Ability
     #
     # See the wiki for details:
     # https://github.com/CanCanCommunity/cancancan/wiki/Defining-Abilities
-  end
+
 end
