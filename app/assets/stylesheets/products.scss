@@ -13,14 +13,15 @@
 }
 
 .field {
+  margin-bottom: 10px;
   display: flex;
   flex-direction: column;
-  width: 200px;
+  width: 90%;
 }
 
 input {
-  height: 40px;
-  width: 300px;
+  height: 50px;
+  width: 90%;
   border-radius: 7px;
 }
 
@@ -31,11 +32,17 @@ div#intrumentPost {
 }
 
 .listing-form {
-  width: 200px;
+  background: #403f3c;
+  width: 40%;
+  color: white;
+  font-size: 22px;
+  padding: 60px;
 }
 
 .listing-help {
-  width: 400px;
+  background-color: white;
+  width: 55%;
+  padding: 55px;
 }
 .listing-help li {
   font-size: 22px;

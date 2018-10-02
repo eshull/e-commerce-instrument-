@@ -16,8 +16,26 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
 
+
+body {
+  /* background-color: #ffd128; */
+    background-image: linear-gradient(60deg, #ffd128, #ffe584);
+}
+
 nav {
-  background-color: lightgrey;
+  background-image: linear-gradient(-60deg, #ffd128, #ffe584);
+  /* background-color: lightgrey; */
+}
+
+input[type="submit"] {
+  background: #ffd128;
+  color: white;
+  font-family: gineso, sans-serif;
+  border: solid 1px white;
+  height: 80px;
+  width: 300px;
+  margin-top: 30px;
+  font-size: 22px;
 }
 
 .cart-items {
