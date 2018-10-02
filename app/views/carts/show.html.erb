@@ -1,20 +1,22 @@
 <div style="height: 20px; width: 400px; background-color: <%=['blue', 'red,' 'green', 'yellow', 'green', 'purple'].sample%>;">
 </div>
+<div class="cart">
+  <h3>Cart</h3>
 
-<h3>Cart</h3>
+  <% if @order_items.any? %>
+    <% @order_items.each do |item| %>
+      <div id="item<%=item.id%>">
+        <p><%= item.product.name %> | <%= link_to "Delete", order_item_path(item), :data => {:confirm => "You sure?", :method => "delete"}, remote: true %></p>
+        <p> Unit Price: <%= number_to_currency item.product.price %> | Quantity: <%= item.quantity %> | Total Price: <%= number_to_currency (item.product.price * item.quantity) %></p>
+      </div>
+      <div style="height: 5px; width: 400px; background-color: <%=['blue', 'red,' 'green', 'yellow', 'green', 'purple', 'orange', 'cyan', 'pink', 'brown'].sample%>;">
+      </div>
 
-<% if @order_items.any? %>
-  <% @order_items.each do |item| %>
-    <div id="item<%=item.id%>">
-      <p><%= item.product.name %> | <%= link_to "Delete", order_item_path(item), :data => {:confirm => "You sure?", :method => "delete"}, remote: true %></p>
-      <p> Unit Price: <%= number_to_currency item.product.price %> | Quantity: <%= item.quantity %> | Total Price: <%= number_to_currency (item.product.price * item.quantity) %></p>
-    </div>
-    <div style="height: 5px; width: 400px; background-color: <%=['blue', 'red,' 'green', 'yellow', 'green', 'purple', 'orange', 'cyan', 'pink', 'brown'].sample%>;">
-    </div>
+    <% end %>
 
+    <div class="price-container"><p>Your Total: <%= number_to_currency current_order.total_price %></p></div>
+  <% else %>
+    <p>Your shopping cart is empty.</p>
   <% end %>
 
-  <div class="price-container"><p>Your Total: <%= number_to_currency current_order.total_price %></p></div>
-<% else %>
-  <p>Your shopping cart is empty.</p>
-<% end %>
+</div>

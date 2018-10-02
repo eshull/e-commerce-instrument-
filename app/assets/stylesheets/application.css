@@ -32,6 +32,16 @@ nav {
   background-image: linear-gradient(-60deg, #ffd128, #ffe584);
   /* background-color: lightgrey; */
 }
+.navbar {
+  position: relative;
+  margin-bottom: 2px;
+  border: 3px bottom solid black;
+  height: 100px;
+}
+
+.navbar-text {
+  margin-top: 25px;
+}
 
 input[type="submit"] {
   background: #ffd128;
@@ -46,6 +56,12 @@ input[type="submit"] {
 
 input[type="submit"]:hover {
     background-color: black;
+}
+
+.cart {
+  background: white;
+  padding: 30px;
+  width: 40%;
 }
 
 .cart-items {
