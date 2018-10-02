@@ -4,6 +4,26 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+.header-image {
+  opacity: .2;
+  height: 430px;
+  width: 100%;
+  background-image: url("header.png");
+  max-width: 100%;
+  // height: auto;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.header-image h1 {
+  opacity: .9;
+  position: absolute;
+  top: 55%;
+  left: 41%;
+  color: white;
+  font-size: 60px;
+  letter-spacing: 3px;
+}
 
 .cart-items {
   position: sticky;
