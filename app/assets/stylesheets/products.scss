@@ -39,6 +39,10 @@
   width: 90%;
 }
 
+.main-body {
+  margin-top: 37px;
+}
+
 .panel {
   background: none;
 }
@@ -51,7 +55,7 @@
 .product {
   background: white;
   padding: 30px;
-  margin-top: 30px;
+  margin-top: 40px;
 }
 
 input {
@@ -80,4 +84,13 @@ div#intrumentPost {
 }
 .listing-help li {
   font-size: 22px;
+}
+
+.makers {
+  background: white;
+  padding: 20px;
+}
+
+.maker {
+  margin-top: 50px;
 }
