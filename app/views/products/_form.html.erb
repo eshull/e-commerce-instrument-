@@ -1,10 +1,53 @@
 <%= render "layouts/errors", :object => @product %>
 
 
-  <%= form_for @product do |f| %>
-    <%= f.label :name %>
-    <%= f.text_field :name %>
-    <%= f.label :price, "Price/Cost" %>
-    <%= f.text_field :price, data: {autonumeric: {vMin: 0.00}}  %>
-    <%= f.submit %>
+  <%= form_for @product  do |form| %>
+  <div class="field">
+    <%= form.label :name %>
+    <%= form.text_field :name  %>
+  </div>
+  <div class="field">
+    <%= form.label :price %>
+    <%= form.text_field :price, data: {autonumeric: {vMin: 0.00}}  %>
+  </div>
+  <div class="field">
+    <%= form.label :maker %>
+    <%= form.text_field :maker %>
+  </div>
+  <div class="field">
+    <%= form.label :model %>
+    <%= form.text_field :model %>
+  </div>
+  <div class="field">
+    <%= form.label :tuning %>
+    <%= form.text_field :tuning %>
+  </div>
+  <div class="field">
+    <%= form.label :finish %>
+    <%= form.text_field :finish %>
+  </div>
+  <div class="field">
+    <%= form.label :category %>
+    <%= form.text_field :category %>
+  </div>
+  <div class="field">
+    <%= form.label :sub_category %>
+    <%= form.text_field :sub_category %>
+  </div>
+  <div class="field">
+    <%= form.label :made_in %>
+    <%= form.text_field :made_in %>
+  </div>
+  <div class="field">
+    <%= form.label :year %>
+    <%= form.text_field :year %>
+  </div>
+  <div class="field">
+    <%= form.label :shipping %>
+    <%= form.text_field :shipping %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
   <% end %>

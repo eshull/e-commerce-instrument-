@@ -4,9 +4,39 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+
 .cart-items {
   position: sticky;
   width: 50px;
   height: 50px;
   background: lightgrey;
+}
+
+.field {
+  display: flex;
+  flex-direction: column;
+  width: 200px;
+}
+
+input {
+  height: 40px;
+  width: 300px;
+  border-radius: 7px;
+}
+
+div#intrumentPost {
+  display: flex !important;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+.listing-form {
+  width: 200px;
+}
+
+.listing-help {
+  width: 400px;
+}
+.listing-help li {
+  font-size: 22px;
 }

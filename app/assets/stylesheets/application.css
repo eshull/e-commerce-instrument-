@@ -30,3 +30,8 @@ nav {
 .alert {
   width: 50%;
 }
+
+.container-fluid {
+  margin-left: 90px;
+  margin-right: 90px;
+}

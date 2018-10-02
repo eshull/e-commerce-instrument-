@@ -1,5 +1,29 @@
-<h1>New Product</h1>
+<h1>Post Your Instrument for Sale</h1>
+<div id="intrumentPost">
+  <div class="listing-form">
+    <%= render 'form', product: @product %>
+  </div>
+  <div class="listing-help">
+    <h2>A well written post has:</h2>
+      <ul>
+        <li>Full, detailed information on the item at hand.</li>
+        <li>Disclosure of any known issues, repairs or adjustments made to the item.</li>
+        <li>  A clear, concise title that simply states what item you are selling.</li>
+        <li>  Reasonable and accurate pricing within the realistic range of what the item might actually sell for.</li>
+      </ul>
+    <h2>A poorly written post has:</h2>
+      <ul>
+        <li>Phone numbers, emails or any other contact info. We require all communication between buyers and sellers stay on our the site using our messaging and offer tools.</li>
+        <li>Obscene or inappropriate language. We're all friends here, let's keep it civil.</li>
+        <li>Bank / wire transfers, cash, or other offsite transactions. Reverb has plenty of options for a safe transaction that we can support in case of any issues.</li>
+        <li>Links to other sites where the item may be for sale.</li><li>All-caps typing. Trust us, no one likes reading anything in all caps.</li>
+        <li>Emoji. We love them as much as you do, but unfortunately including them in your listings can mess up search results.</li>
+        <li>Language encouraging trades or listing potential trade wants.</li>
+        <li>Irrelevant/unrelated brand names or "keywords" to boost the listing search results.</li>
+        <li>Inappropriate language. Aggressive, disparaging, abusive or derogatory language directed at individuals or groups, whether on the Reverb platform or off of it.</li>
+      </ul>
+  </div>
+</div>
 
-<%= render 'form', product: @product %>
 
 <%= link_to 'Back', products_path %>
