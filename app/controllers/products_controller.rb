@@ -10,6 +10,8 @@ class ProductsController < ApplicationController
     @product = Product.first
     @products = Product.all
     @order_item = current_order.order_items.new
+    @makers = User.find_maker
+    binding.pry
 
     # binding.pry
   end

@@ -51,6 +51,13 @@
       <p><%= render "carts/cart" %></p>
     </div>
   </div>
+  <% @makers.each do |user| %>
+    <h4>email: <%= user.email %></h4>
+    <h4>Location: <%= user.location %></h4>
+    <h4>Joined: <%= user.joined %></h4>
+    <h4>Rating: <%= user.rating %></h4>
+
+  <% end %>
 
   </div>
 </div>

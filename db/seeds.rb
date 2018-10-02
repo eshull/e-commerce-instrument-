@@ -13,6 +13,10 @@ Product.destroy_all
   Product.create!(name: "Lute", price: 3000, condition: "excellent", maker: "Hans Frei", model: "Frei Pearl", tuning: "d-minor", finish: "shellac and wax", category: "Lute", sub_category: "Baroque", image: "lute.jpg", second_image: "lute2.jpg", third_image: "lute3.jpg", description: "Good instrument, plays nice, I don't play it anymore. Needs a good home. Feel free to ask any questions about it.", made_in: "USA", year: 1998, shipping: 75)
 end
 
+10.times do |index|
+  User.create!(email: Faker::Internet.free_email, password: "password", superadmin_role: true, rating: Faker::Number.between(1, 5), location: "USA", joined: "2014", maker: true)
+end
+
 User.create!( email: "admin@admin.com", password: "password", superadmin_role: true )
 User.create!( email: "visor@visor.com", password: "password", supervisor_role: true )
 User.create!( email: "test@test.com", password: "password", user_role: true )
