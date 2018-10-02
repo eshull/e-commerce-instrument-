@@ -19,6 +19,16 @@
   width: 90%;
 }
 
+.panel {
+  background: none;
+}
+
+.product {
+  background: white;
+  padding: 30px;
+  margin-top: 30px;
+}
+
 input {
   height: 50px;
   width: 90%;
@@ -41,8 +51,7 @@ div#intrumentPost {
 
 .listing-help {
   background-color: white;
-  width: 55%;
-  padding: 55px;
+  width: 35%;
 }
 .listing-help li {
   font-size: 22px;

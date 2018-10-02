@@ -8,19 +8,30 @@
 </div>
 <div class="row">
   <div class="col-md-9">
-    <div class="panel panel-default">
-      <div class="panel-heading">
-        <h1 class="panel-title">Products</h1>
-      </div>
+    <div class="panel">
         <div class="panel-body">
           <% @products.each do |product| %>
+          <div class="product">
+            <%= image_tag( product.image, :alt => "image", :class => "img-fluid") %>
             <p><%= link_to product.name, product_path(product) %> | <%= number_to_currency product.price %>
+            <%= number_to_currency product.maker %>
+            <%= number_to_currency product.model %>
+            <%= number_to_currency product.category %> |
+            <%= number_to_currency product.sub_category %>
+            <%= number_to_currency product.made_in %>
+            <%= number_to_currency product.year %>
+            <%= number_to_currency product.shipping %>
             <%= form_for @order_item, remote: true do |f| %>
               <%= f.hidden_field :product_id, value: product.id %>
               <%= f.hidden_field :quantity, value:1 %>
               <%= f.submit "Add to cart", class: "btn btn-primary" %>
             <% end %></p>
+            </div>
           <% end %>
+          <br>
+          <br>
+
+
         </div>
     </div>
   </div>
