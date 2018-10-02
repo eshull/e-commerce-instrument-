@@ -75,6 +75,10 @@ input[type="submit"]:hover {
     background-color: black;
 }
 
+label {
+  font-size: 22px;
+}
+
 .cart {
   background: white;
   padding: 30px;
