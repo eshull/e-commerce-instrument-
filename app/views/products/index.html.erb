@@ -65,6 +65,7 @@
     <h1>Instrument Makers</h1>
     <% @makers.each do |user| %>
       <div class="maker">
+        <%= link_to user.email, user_path(user) %>
         <h4>email: <%= user.email %></h4>
         <h4>Location: <%= user.location %></h4>
         <h4>Joined: <%= user.joined %></h4>

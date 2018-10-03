@@ -1,0 +1,9 @@
+<h1>User Show</h1>
+<div class="maker-details">
+  <%= image_tag( 'avatar.png', :alt => "image", :class => "img-fluid") %>
+  <h1>User Name</h1>
+  <h3>email: <%= @user.email %></h3>
+  <h4>Location: <%= @user.location %></h4>
+  <h4>Joined: <%= @user.joined %></h4>
+  <h4>Rating: <%= @user.rating %></h4>
+</div>

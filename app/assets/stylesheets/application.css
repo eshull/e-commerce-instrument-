@@ -123,3 +123,9 @@ input[type="checkbox"] {
 .check-box input {
   justify-content: flex-start;
 }
+
+.maker-details {
+  background: white;
+  width: 500px;
+  padding: 30px;
+}
