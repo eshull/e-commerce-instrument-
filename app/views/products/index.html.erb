@@ -1,6 +1,15 @@
 <p id="notice"><%= notice %></p>
-<div class="">
-  <h1>HARMONIA</h1>
+
+
+<div class="header">
+  <div class="header-info">
+    <h1>Harmonia</h1>
+    <h2>Buy and Sell Early Musical Instruments</h2>
+  </div>
+  <div class="header-image">
+    <%= image_tag('early_music.png', :alt => "image", :class => "img-fluid") %>
+  </div>
+
 </div>
 <div class="">
   <h2>Items in Cart</h2>
@@ -41,11 +50,12 @@
     </div>
   </div>
   <div class="col-md-3">
-    <%= link_to "Show Cart", products_path, id: "show_cart_link", class: "btn btn-success", remote: true %>
-    <%= link_to "Hide Cart", products_path, id: "hide_cart_link", class: "btn btn-danger", remote: true %>
+
     <div class="panel panel-default">
     <div class="panel-heading">
       <h3 class="panel-title">Current Cart Items</h3>
+      <%= link_to "Show Cart", products_path, id: "show_cart_link", class: "btn", remote: true %>
+      <%= link_to "Hide Cart", products_path, id: "hide_cart_link", class: "btn", remote: true %>
     </div>
     <div class="panel-body" id="hideshow">
       <p><%= render "carts/cart" %></p>

@@ -4,15 +4,31 @@
 @import "bootstrap-sprockets";
 @import "bootstrap";
 
+// svg {
+//   position: relative;
+//   width: 1825px;
+//   height: 50px;
+//   left: 50%;
+//   transform: translateX(-50%);
+//   border: 3px solid black;
+// }
+
+.header {
+  padding: 30px;
+  background-color: white;
+  display: flex;
+  border: 3px solid #ffd128;
+}
+
 .header-image {
-  opacity: .2;
-  height: 430px;
+  // opacity: .2;
+  // height: 430px;
   width: 100%;
-  background-image: url("header.png");
-  max-width: 100%;
-  // height: auto;
-  background-repeat: no-repeat;
-  background-size: cover;
+  // background-image: url("header.png");
+  // max-width: 100%;
+  // // height: auto;
+  // background-repeat: no-repeat;
+  // background-size: cover;
 }
 
 .header-image h1 {
@@ -39,11 +55,13 @@
   width: 90%;
 }
 
-.main-body {
-  margin-top: 37px;
+.panel-title {
+  margin-top: 9px;
 }
 
-
+.panel-heading {
+  display: flex;
+}
 
 .panel-body {
   background: white;
@@ -53,12 +71,22 @@
 .product {
   background: white;
   padding: 30px;
-  margin-top: 40px;
+  margin-bottom: 40px;
 }
 
 .product-form {
   width: 40%;
   padding: 30px;
+}
+
+.post-help {
+  padding: 30px;
+  background: white;
+  width: 55%;
+}
+
+.post-help li {
+  font-size: 22px;
 }
 
 input {
