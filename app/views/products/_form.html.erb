@@ -1,7 +1,7 @@
 <%= render "layouts/errors", :object => @product %>
 
 
-  <%= form_for @product  do |form| %>
+  <%= form_for [@user, @product] do |form| %>
   <div class="field">
     <%= form.label :name %>
     <%= form.text_field :name  %>
@@ -45,6 +45,11 @@
   <div class="field">
     <%= form.label :shipping %>
     <%= form.text_field :shipping %>
+  </div>
+  <div class="field">
+    <%= form.hidden_field :image, value: "lute.png" %>
+    <%= form.hidden_field :second_image, value: "lute2.png" %>
+    <%= form.hidden_field :third_image, value: "lute3.png" %>
   </div>
 
   <div class="actions">
