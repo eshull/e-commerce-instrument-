@@ -36,7 +36,6 @@ class ProductsController < ApplicationController
 
     respond_to do |format|
       if @product.save
-        binding.pry
         format.html { redirect_to @product, notice: 'Product was successfully created.' }
         format.json { render :show, status: :created, location: @product }
       else
@@ -78,6 +77,6 @@ class ProductsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def product_params
-      params.require(:product).permit(:name, :price)
+      params.require(:product).permit(:name, :price, :condition, :maker, :model, :tuning, :finish, :category, :sub_category, :made_in, :year, :image, :second_image, :third_image, :description, :shipping)
     end
 end
